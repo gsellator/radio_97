@@ -1,0 +1,82 @@
+.bs-docs-example:after{
+  content: none;
+}
+
+.bs-docs-example {
+  padding: 19px 19px 19px;
+  background-color: transparent;
+  background-image: url(../img/papier-peint.jpeg);
+  background-position: center;
+  min-width: 900px;
+}
+
+html {
+ min-width: 980px; 
+}
+
+.horloge-cadre{
+  width:320px;
+  height:320px;
+  padding-top: 41px;
+  padding-left: 41px;
+  vertical-align: middle;
+  float: right; 
+  background-image: url(../img/horloge-cadre.png);
+  margin-right: 30px;
+}
+
+.horloge-back-leds{
+  background-color: black;
+  position: absolute; 
+  width: 299px;
+  height: 299px;
+  background-image: url(../img/horloge-back-leds.png);
+  background-repeat:no-repeat;
+}
+
+.horloge-front-leds{
+  position: absolute;
+  width:265px; 
+  height: 265px;
+  margin-left: 16px;
+  margin-top: 16px;
+  background-image: url(../img/horloge-front-leds-sprite.png);
+  background-repeat: repeat;
+  background-position: 0 0px;
+}
+
+.horloge-chiffres{
+  width: 230px;
+  padding-top: 90px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.horloge-reflet {
+  position: absolute;
+  width: 299px;
+  height: 299px;
+  background-image: url(../img/horloge-reflet.png);
+  background-repeat: no-repeat;
+}
+
+.tv-fond{
+  width: 361px;
+  height: 253px;
+  vertical-align: middle;
+  background-image: url(../img/tv-fond.png);
+  background-repeat: no-repeat; 
+  background-position: center; 
+  padding-top:46px;
+  margin-top: 31px;
+  margin-bottom: 31px;
+  margin-left: 30px;
+}
+
+.tv-image{
+  height: 228px;
+  vertical-align: middle;
+  margin-left: 43px;
+  background-image: url(../img/tv-image-e2.png);
+  background-repeat: no-repeat;
+}
