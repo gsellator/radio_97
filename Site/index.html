@@ -7,24 +7,27 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width">
+    
     <!--<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">-->
     <!--<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-responsive.min.css" rel="stylesheet">-->    
+    
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/docs.css" rel="stylesheet">
     <link href="css/radio.css" rel="stylesheet">
-    
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <!--<link rel="apple-touch-icon" sizes="144x144" href="img/icon-144.png">-->
+
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <!--<link rel="apple-touch-icon" sizes="144x144" href="img/icon-144.png">-->
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
     <script src="js/jquery-1.8.3.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/modernizr.js"></script>
+    <script src="js/jquery.jplayer.min.js"></script>
+    <script src="js/script.js"></script>
     <script src="js/radio.js"></script>
   </head>
 
@@ -74,31 +77,62 @@
           <div class="bs-docs-example">
             
             <script>draw_clock()</script>
+            <div id="jquery_jplayer"></div>
+            
             <div class="horloge-cadre">
-
-                <div class="horloge-back-leds" id="back-leds">
-                  <div class ="horloge-front-leds" id="background">
-                    <img src="img/horloge-front-leds.png" id="back" style="position:absolute;clip:rect(0px,0px,0px,0px);">
-                    <div class ="horloge-chiffres">
-                      <img id="h-a" src="img/chr-off.png" />
-                      <img id="h-b" src="img/chr-off.png" />
-                      <img class="spacer" src="img/spacr-off.png" />
-                      <img id="m-a" src="img/chr-off.png" />
-                      <img id="m-b" src="img/chr-off.png" />
-                    </div>
+              <div class="horloge-back-leds" id="back-leds">
+                <div class ="horloge-front-leds" id="background">
+                  <img src="img/horloge-front-leds.png" id="back" style="position:absolute;clip:rect(0px,0px,0px,0px);">
+                  <div class ="horloge-chiffres">
+                    <img id="h-a" src="img/chr-off.png" />
+                    <img id="h-b" src="img/chr-off.png" />
+                    <img class="spacer" src="img/spacr-off.png" />
+                    <img id="m-a" src="img/chr-off.png" />
+                    <img id="m-b" src="img/chr-off.png" />
                   </div>
                 </div>
-                <div class="horloge-reflet">
-                </div>
-
+              </div>
+              <div class="horloge-reflet"></div>
             </div>
 
-
             <div class="tv-fond" style="">
-              <div class="tv-image" style="">
+              <div class="tv-image" id="tv-image" style="">
               </div>
             </div>
 
+
+            <div id="seconds">0</div>
+            <div id="jp_container" class="demo-container" style="position:absolute; top:300px;">
+              <ul>
+                <li><span>Select a track : </span></li>
+                <li><a href="mp3/1-Europe2.mp3" class="track track-default">Europe 2</a></li>
+                <li><a href="mp3/2-NRJ.mp3" class="track">NRJ</a></li>
+                <li><a href="mp3/3-ChanteFrance.mp3" class="track">Chante France</a></li>
+                <li><a href="mp3/4-Nova.mp3" class="track">Nova</a></li>
+                <li><a href="mp3/5-StyleFM.mp3" class="track">Style FM</a></li>
+                <li><a href="mp3/6-Skyrock.mp3" class="track">Skyrock</a></li>
+                <li><a href="mp3/7-Nostalgie.mp3" class="track">Nostalgie</a></li>
+                <li><a href="mp3/8-Fun.mp3" class="track">Fun Radio</a></li>
+                <li><a href="mp3/9-Latina.mp3" class="track">Radio Latina</a></li>
+              </ul>
+              <p>
+                <span class="play-state"></span> :
+                <span class="track-name">nothing</span>
+                at <span class="extra-play-info"></span>
+                of <span class="jp-duration"></span>, which is
+                <span class="jp-current-time"></span>
+              </p>
+              <ul>
+                <li><a class="jp-play" href="#">Play</a></li>
+                <li><a class="jp-pause" href="#">Pause</a></li>
+                <li><a class="jp-stop" href="#">Stop</a></li>
+              </ul>
+              <div class="jp-progress">
+                <div class="jp-seek-bar">
+                  <div class="jp-play-bar"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
