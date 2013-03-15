@@ -75,7 +75,6 @@
       <div class="row">
         <div class="span12">
           <div class="bs-docs-example">
-            
             <script>draw_clock()</script>
             <div id="jquery_jplayer"></div>
             
@@ -95,45 +94,63 @@
               <div class="horloge-reflet"></div>
             </div>
 
-            <div class="tv-fond" style="">
-              <div class="tv-image" id="tv-image" style="">
+            <div class="visible-desktop">
+              <div class="tv-fond" style="">
+                <div class="tv-image" id="tv-image" style="">
+                </div>
               </div>
             </div>
 
 
-            <div id="seconds">0</div>
-            <div id="jp_container" class="demo-container" style="position:absolute; top:300px;">
+            
+          </div>
+        </div>
+        <div class="span12">
+          
+            <div id="jp_container" class="demo-container">
               <ul>
-                <li><span>Select a track : </span></li>
-                <li><a href="mp3/1-Europe2.mp3" class="track track-default">Europe 2</a></li>
-                <li><a href="mp3/2-NRJ.mp3" class="track">NRJ</a></li>
-                <li><a href="mp3/3-ChanteFrance.mp3" class="track">Chante France</a></li>
-                <li><a href="mp3/4-Nova.mp3" class="track">Nova</a></li>
-                <li><a href="mp3/5-StyleFM.mp3" class="track">Style FM</a></li>
-                <li><a href="mp3/6-Skyrock.mp3" class="track">Skyrock</a></li>
-                <li><a href="mp3/7-Nostalgie.mp3" class="track">Nostalgie</a></li>
-                <li><a href="mp3/8-Fun.mp3" class="track">Fun Radio</a></li>
-                <li><a href="mp3/9-Latina.mp3" class="track">Radio Latina</a></li>
+                <li>
+                  <a class="btn jp-play" href="#">
+                    <i class="icon-play"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="btn jp-pause" href="#">
+                    <i class="icon-pause"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="btn jp-stop" href="#">
+                    <i class="icon-stop"></i>
+                  </a>
+                </li>
               </ul>
-              <p>
+
+              <ul>
+                <li><a href="mp3/1-Europe2.mp3" class="btn track track-default">Europe 2</a></li>
+                <li><a href="mp3/2-NRJ.mp3" class="btn track">NRJ</a></li>
+                <li><a href="mp3/3-ChanteFrance.mp3" class="btn track">Chante France</a></li>
+                <li><a href="mp3/4-Nova.mp3" class="btn track">Nova</a></li>
+                <li><a href="mp3/5-StyleFM.mp3" class="btn track">Style FM</a></li>
+                <li><a href="mp3/6-Skyrock.mp3" class="btn track">Skyrock</a></li>
+                <li><a href="mp3/7-Nostalgie.mp3" class="btn track">Nostalgie</a></li>
+                <li><a href="mp3/8-Fun.mp3" class="btn track">Fun Radio</a></li>
+                <li><a href="mp3/9-Latina.mp3" class="btn track">Radio Latina</a></li>
+              </ul>
+              <div>
                 <span class="play-state"></span> :
                 <span class="track-name">nothing</span>
                 at <span class="extra-play-info"></span>
                 of <span class="jp-duration"></span>, which is
                 <span class="jp-current-time"></span>
-              </p>
-              <ul>
-                <li><a class="jp-play" href="#">Play</a></li>
-                <li><a class="jp-pause" href="#">Pause</a></li>
-                <li><a class="jp-stop" href="#">Stop</a></li>
-              </ul>
+              </div>
+              <div id="seconds">0</div>
               <div class="jp-progress">
                 <div class="jp-seek-bar">
                   <div class="jp-play-bar"></div>
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>

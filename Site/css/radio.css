@@ -7,11 +7,12 @@
   background-color: transparent;
   background-image: url(../img/papier-peint.jpeg);
   background-position: center;
-  min-width: 900px;
+  height: 400px;
+  /*min-width: 900px;*/
 }
 
 html {
- min-width: 980px; 
+ /*min-width: 980px;*/
 }
 
 .horloge-cadre{
@@ -79,4 +80,17 @@ html {
   margin-left: 43px;
   background-image: url(../img/tv-image-1.png);
   background-repeat: no-repeat;
+}
+
+li {
+  list-style: none;
+}
+
+@media (max-width: 979px) {
+
+  .horloge-cadre{
+    margin: auto;
+    float: none;
+  }
+
 }
