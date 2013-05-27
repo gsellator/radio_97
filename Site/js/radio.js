@@ -12,7 +12,7 @@ function draw_clock(){
       var offset = 73505;
       $('#tv-image').css("background-image", "url(img/tv-image-2.png)");
     }
-    else if($("span.track-name").html() == "Chante France") {
+    else if($("span.track-name").html() == "ChanteFrance") {
       var offset = 74921;
       $('#tv-image').css("background-image", "url(img/tv-image-3.png)");
     }
@@ -40,6 +40,13 @@ function draw_clock(){
       var offset = 81035;
       $('#tv-image').css("background-image", "url(img/tv-image-9.png)");
     }
+
+    if ($("span.play-state").html() != "Now playing"){ 
+      $('#tv-image').css("background-image", "url(img/tv-image-0.png)");
+    }
+
+    var pourcentage = 'width: ' + $('#extra-play-info').text();
+    $('#progress-bar').attr('style', pourcentage);
 
     update_clock(s, offset);
   },1000);
@@ -372,3 +379,4 @@ function secondsToTime(sec, offset) {
   };
   return obj;
 }
+

@@ -23,15 +23,29 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+
     <script src="js/jquery-1.8.3.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/modernizr.js"></script>
     <script src="js/jquery.jplayer.min.js"></script>
+    <script src="js/jquery.noisy.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/radio.js"></script>
   </head>
 
   <body>
+    <script>
+      draw_clock();
+
+      $('body').noisy({
+        intensity: 1,
+        size: 200,
+        opacity: 0.08,
+        fallback: 'fallback.png',
+        monochrome: false
+      }).css('background-color', '#EDEBDE');
+    </script>
 
     <!-- Navbar générale-->
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -63,19 +77,13 @@
       </div>
     </div>
     
-    <header class="jumbotron masthead">
-      <div class="container">
-        <h1>Radio 97</h1>
-        <p>Revivez la soirée du 27 décembre 1997.</p>
-      </div>
-    </header>  
+
 
 
     <div class="container">
-      <div class="row">
-        <div class="span12">
+      <div class="row-fluid">
+        <div class="span12" id="jp_container">
           <div class="bs-docs-example">
-            <script>draw_clock()</script>
             <div id="jquery_jplayer"></div>
             
             <div class="horloge-cadre">
@@ -100,78 +108,101 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        
-        <div id="jp_container" class="demo-container">
 
-          <div class="span12 surcont">
-            <div class="cont cont1 span6">
-              <img src="img/chrono-1.png">
+            <div class="controleurs">
               <ul>
-                <li class="piste4" style="float: right;"><a href="mp3/4-Nova.mp3" class="btn btn-piste track">Nova</a></li>
-                <li class="piste3" style="float: right;"><a href="mp3/3-ChanteFrance.mp3" class="btn btn-piste track">Chante France</a></li>
-                <li class="piste2" style="float: right;"><a href="mp3/2-NRJ.mp3" class="btn btn-piste track">NRJ</a></li>
-                <li class="piste1" style="float: right;"><a href="mp3/1-Europe2.mp3" class="btn btn-piste track track-default">Europe 2</a></li>
+                <li>
+                  <a class="btn jp-play" href="#">
+                    <i class="icon-play"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="btn jp-pause" href="#">
+                    <i class="icon-pause"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="btn jp-stop" href="#" style="margin-right: 8px;">
+                    <i class="icon-stop"></i>
+                  </a>
+                </li>
               </ul>
-            </div>
-            <div class="cont span6">
-              <img src="img/chrono-2.png">
-              <ul>
-                <li class="piste5"><a href="mp3/5-StyleFM.mp3" class="btn btn-piste track">Style FM</a></li>
-                <li class="piste6"><a href="mp3/6-Skyrock.mp3" class="btn btn-piste track">Skyrock</a></li>
-                <li class="piste7"><a href="mp3/7-Nostalgie.mp3" class="btn btn-piste track">Nostalgie</a></li>
-                <li class="piste8"><a href="mp3/8-Fun.mp3" class="btn btn-piste track">Fun Radio</a></li>
-                <li class="piste9"><a href="mp3/9-Latina.mp3" class="btn btn-piste track">Radio Latina</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="span12">
-            <ul>
-              <li>
-                <a class="btn jp-play" href="#">
-                  <i class="icon-play"></i>
-                </a>
-              </li>
-              <li>
-                <a class="btn jp-pause" href="#">
-                  <i class="icon-pause"></i>
-                </a>
-              </li>
-              <li>
-                <a class="btn jp-stop" href="#">
-                  <i class="icon-stop"></i>
-                </a>
-              </li>
-            </ul>
-            <div class="jp-progress">
-              <div class="jp-seek-bar">
-                <div class="jp-play-bar"></div>
+              <div class="progress">
+                <div id="progress-bar" class="bar" style="width: 0%;"></div>
               </div>
             </div>
-          </div>
 
-          <div class="span12">
-            <div>
-              <span class="play-state"></span> :
-              <span class="track-name">nothing</span>
-              at <span class="extra-play-info"></span>
-              of <span class="jp-duration"></span>, which is
-              <span class="jp-current-time"></span>
+          </div>
+        
+        
+          <div class="surcont" >
+              
+            <div class="prog">
+              <div class="demiprog demiprog1">
+                
+                <img src="img/chrono-1.png">
+                <ul class="pistes" >
+                  <li class="piste1"><a href="mp3/1-Europe2.mp3" class="btn-piste track track-default">Europe 2</a></li>
+                  <li class="piste2"><a href="mp3/2-NRJ.mp3" class="btn-piste track">NRJ</a></li>
+                  <li class="piste3"><a href="mp3/3-ChanteFrance.mp3" class="btn-piste btn-two-line track">Chante<br>France</a></li>
+                  <li class="piste4"><a href="mp3/4-Nova.mp3" class="btn-piste track">Nova</a></li>
+                </ul>
+              </div>
+              <div class="demiprog demiprog2">
+                <img src="img/chrono-2.png">
+                <ul class="pistes">
+                  <li class="piste5"><a href="mp3/5-StyleFM.mp3" class="btn-piste track">Style FM</a></li>
+                  <li class="piste6"><a href="mp3/6-Skyrock.mp3" class="btn-piste track">Skyrock</a></li>
+                  <li class="piste7"><a href="mp3/7-Nostalgie.mp3" class="btn-piste track">Nostalgie</a></li>
+                  <li class="piste8"><a href="mp3/8-Fun.mp3" class="btn-piste track">Fun Radio</a></li>
+                  <li class="piste9"><a href="mp3/9-Latina.mp3" class="btn-piste btn-two-line track">Radio<br>Latina</a></li>
+                </ul>
+
+              </div>
             </div>
-            <div id="seconds">0</div>
+
+            
+
+            <div class="hidden">
+              <div>
+                <span id="extra-play-info" class="hidden extra-play-info"></span>
+
+                <span class="play-state"></span> :
+                <span class="track-name">nothing</span>
+                at <span class="extra-play-info"></span>
+                of <span class="jp-duration"></span>, which is
+                <span class="jp-current-time"></span>
+              </div>
+              <div id="seconds">0</div>
+            </div>
           </div>
 
-        </div>
+          
+        </div> <!--span12-->
       </div>
     </div>
 
-    <footer class="footer">
-      <div class="container">
-        <p>Mixtapé par Arnaud J, <a href="http://twitter.com/ghislaindj" target="_blank">@ghislaindj</a> & <a href="http://twitter.com/gsellator" target="_blank">@gsellator</a>.</p>
+    <footer>
+      <div class="footer-top">
+        <h2>Revivez la soirée du<br/>27 décembre 1997.</h2>
       </div>
-    </footer>
+      <div class="footer-bottom">
+        <p>Mixtapé par <a href="http://twitter.com/ghislaindj" target="_blank">@ghislaindj</a>, <a href="http://beercrying.tumblr.com/">Arnaud</a>,  & <a href="http://twitter.com/gsellator" target="_blank">@gsellator</a>.</p>
+      </div>
+    </footer> 
+
+    <img style="display: none;" src="img/tv-image-1.png">
+    <img style="display: none;" src="img/tv-image-2.png">
+    <img style="display: none;" src="img/tv-image-3.png">
+    <img style="display: none;" src="img/tv-image-4.png">
+    <img style="display: none;" src="img/tv-image-5.png">
+    <img style="display: none;" src="img/tv-image-6.png">
+    <img style="display: none;" src="img/tv-image-7.png">
+    <img style="display: none;" src="img/tv-image-8.png">
+    <img style="display: none;" src="img/tv-image-9.png">
+    
+
+
     
     <!--<script src="js/mvm.js"></script>
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
