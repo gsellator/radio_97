@@ -1,220 +1,173 @@
 <!DOCTYPE html>
-<!--<html manifest="site.appcache" lang="fr">-->
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <title>Radio 97</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width">
+    <head>
+        <meta charset="utf-8">
+        <title>Radio 97</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="css/docs.css" rel="stylesheet">
+        <link href="css/radio.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <script type="text/javascript" src="//use.typekit.net/slz3nvc.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script src="js/jquery-1.8.3.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.jplayer.min.js"></script>
+        <script src="js/jquery.noisy.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/radio.js"></script>
+    </head>
     
-    <!--<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">-->
-    <!--<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-responsive.min.css" rel="stylesheet">-->    
-    
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="css/docs.css" rel="stylesheet">
-    <link href="css/radio.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <!--<link rel="apple-touch-icon" sizes="144x144" href="img/icon-144.png">-->
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lte IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-      <style type="text/css">
-        .footer-top h2 {
-          color: black;
-        }
-      </style>
-    <![endif]-->
-
-
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
-
-    <script src="js/jquery-1.8.3.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/modernizr.js"></script>
-    <script src="js/jquery.jplayer.min.js"></script>
-    <script src="js/jquery.noisy.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/radio.js"></script>
-  </head>
-
-  <body>
-    <script>
-      draw_clock();
-
-      $('body').noisy({
-        intensity: 1,
-        size: 200,
-        opacity: 0.08,
-        fallback: 'fallback.png',
-        monochrome: false
-      }).css('background-color', '#EDEBDE');
-    </script>
-
-    <!-- Navbar générale-->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
+    <body>
+        <script>
+            draw_clock();
+            $('body').noisy({
+                intensity: 1,
+                size: 200,
+                opacity: 0.08,
+                fallback: 'fallback.png',
+                monochrome: false
+            }).css('background-color', '#EDEBDE');
+        </script>
+        
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active">
+                                <a href="index.html">L'émission</a>
+                            </li>
+                            <li class="">
+                                <a href="animateurs.html">Les animateurs</a>
+                            </li>
+                            <li class="">
+                                <a href="playlist.html">La playlist</a>
+                            </li>
+                            <li class="logoright">
+                                <img src="img/logo.png" alt="Logo radio 97">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
         <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="./index.html">Radio 97</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active">
-                <a href="index.html">L'émission</a>
-              </li>
-              <li class="active">
-                <a href="animateurs.html">Les animateurs</a>
-              </li>
-              <li class="active">
-                <a href="playlist.html">La playlist</a>
-              </li>
-              <li class="active">
-                <a href="projet.html">Le projet Radio 97</a>
-              </li>
-            </ul>
-          </div>
+            <div class="row-fluid">
+                <div class="span12" id="jp_container">
+                    <div class="bs-docs-example">
+                        <div id="jquery_jplayer"></div>
+                        <div class="horloge-cadre">
+                            <div class="horloge-back-leds" id="back-leds">
+                                <div class ="horloge-front-leds" id="background">
+                                    <img src="img/horloge-front-leds.png" id="back" style="position:absolute;clip:rect(0px,0px,0px,0px);">
+                                    <div class ="horloge-chiffres">
+                                        <img id="h-a" src="img/chr-off.png" />
+                                        <img id="h-b" src="img/chr-off.png" />
+                                        <img class="spacer" src="img/spacr-off.png" />
+                                        <img id="m-a" src="img/chr-off.png" />
+                                        <img id="m-b" src="img/chr-off.png" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="horloge-reflet"></div>
+                        </div>
+                        <div class="visible-desktop">
+                            <div class="tv-fond" style="">
+                                <div class="tv-image" id="tv-image" style="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="controleurs">
+                            <ul>
+                                <li>
+                                    <a class="btn jp-play" href="#">
+                                        <i class="icon-play"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="btn jp-pause" href="#">
+                                        <i class="icon-pause"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="btn jp-stop" href="#" style="margin-right: 8px;">
+                                        <i class="icon-stop"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="progress">
+                                <div id="progress-bar" class="bar" style="width: 0%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="surcont" >
+                        <div class="prog">
+                            <div class="demiprog demiprog1">
+                                <img src="img/chrono-1.png">
+                                <ul class="pistes" >
+                                    <li class="piste1"><a href="mp3/1-Europe2.mp3" class="btn-piste track track-default">Europe 2</a></li>
+                                    <li class="piste2"><a href="mp3/2-NRJ.mp3" class="btn-piste track">NRJ</a></li>
+                                    <li class="piste3"><a href="mp3/3-ChanteFrance.mp3" class="btn-piste btn-two-line track">Chante<br>France</a></li>
+                                    <li class="piste4"><a href="mp3/4-Nova.mp3" class="btn-piste track">Nova</a></li>
+                                </ul>
+                            </div>
+                            <div class="demiprog demiprog2">
+                                <img src="img/chrono-2.png">
+                                <ul class="pistes">
+                                    <li class="piste5"><a href="mp3/5-StyleFM.mp3" class="btn-piste track">Style FM</a></li>
+                                    <li class="piste6"><a href="mp3/6-Skyrock.mp3" class="btn-piste track">Skyrock</a></li>
+                                    <li class="piste7"><a href="mp3/7-Nostalgie.mp3" class="btn-piste track">Nostalgie</a></li>
+                                    <li class="piste8"><a href="mp3/8-Fun.mp3" class="btn-piste track">Fun Radio</a></li>
+                                    <li class="piste9"><a href="mp3/9-Latina.mp3" class="btn-piste btn-two-line track">Radio<br>Latina</a></li>
+                                </ul> 
+                            </div>
+                        </div>
+                        <div class="hidden">
+                            <div>
+                                <span id="extra-play-info" class="hidden extra-play-info"></span>
+                                <span class="play-state"></span> :
+                                <span class="track-name">nothing</span>
+                                at <span class="extra-play-info"></span>
+                                of <span class="jp-duration"></span>, which is
+                                <span class="jp-current-time"></span>
+                            </div>
+                            <div id="seconds">0</div>
+                        </div>
+                    </div>
+                </div> <!--span12-->
+            </div>
         </div>
-      </div>
-    </div>
-    
-
-
-
-    <div class="container">
-      <div class="row-fluid">
-        <div class="span12" id="jp_container">
-          <div class="bs-docs-example">
-            <div id="jquery_jplayer"></div>
-            
-            <div class="horloge-cadre">
-              <div class="horloge-back-leds" id="back-leds">
-                <div class ="horloge-front-leds" id="background">
-                  <img src="img/horloge-front-leds.png" id="back" style="position:absolute;clip:rect(0px,0px,0px,0px);">
-                  <div class ="horloge-chiffres">
-                    <img id="h-a" src="img/chr-off.png" />
-                    <img id="h-b" src="img/chr-off.png" />
-                    <img class="spacer" src="img/spacr-off.png" />
-                    <img id="m-a" src="img/chr-off.png" />
-                    <img id="m-b" src="img/chr-off.png" />
-                  </div>
-                </div>
-              </div>
-              <div class="horloge-reflet"></div>
-            </div>
-
-            <div class="visible-desktop">
-              <div class="tv-fond" style="">
-                <div class="tv-image" id="tv-image" style="">
-                </div>
-              </div>
-            </div>
-
-            <div class="controleurs">
-              <ul>
-                <li>
-                  <a class="btn jp-play" href="#">
-                    <i class="icon-play"></i>
-                  </a>
-                </li>
-                <li>
-                  <a class="btn jp-pause" href="#">
-                    <i class="icon-pause"></i>
-                  </a>
-                </li>
-                <li>
-                  <a class="btn jp-stop" href="#" style="margin-right: 8px;">
-                    <i class="icon-stop"></i>
-                  </a>
-                </li>
-              </ul>
-              <div class="progress">
-                <div id="progress-bar" class="bar" style="width: 0%;"></div>
-              </div>
-            </div>
-
-          </div>
         
-        
-          <div class="surcont" >
-              
-            <div class="prog">
-              <div class="demiprog demiprog1">
-                
-                <img src="img/chrono-1.png">
-                <ul class="pistes" >
-                  <li class="piste1"><a href="mp3/1-Europe2.mp3" class="btn-piste track track-default">Europe 2</a></li>
-                  <li class="piste2"><a href="mp3/2-NRJ.mp3" class="btn-piste track">NRJ</a></li>
-                  <li class="piste3"><a href="mp3/3-ChanteFrance.mp3" class="btn-piste btn-two-line track">Chante<br>France</a></li>
-                  <li class="piste4"><a href="mp3/4-Nova.mp3" class="btn-piste track">Nova</a></li>
-                </ul>
-              </div>
-              <div class="demiprog demiprog2">
-                <img src="img/chrono-2.png">
-                <ul class="pistes">
-                  <li class="piste5"><a href="mp3/5-StyleFM.mp3" class="btn-piste track">Style FM</a></li>
-                  <li class="piste6"><a href="mp3/6-Skyrock.mp3" class="btn-piste track">Skyrock</a></li>
-                  <li class="piste7"><a href="mp3/7-Nostalgie.mp3" class="btn-piste track">Nostalgie</a></li>
-                  <li class="piste8"><a href="mp3/8-Fun.mp3" class="btn-piste track">Fun Radio</a></li>
-                  <li class="piste9"><a href="mp3/9-Latina.mp3" class="btn-piste btn-two-line track">Radio<br>Latina</a></li>
-                </ul>
-
-              </div>
+        <footer>
+            <div class="footer-top">
+                <h2>Revivez la soirée du<br/>27 décembre 1997.</h2>
             </div>
-
-            
-
-            <div class="hidden">
-              <div>
-                <span id="extra-play-info" class="hidden extra-play-info"></span>
-
-                <span class="play-state"></span> :
-                <span class="track-name">nothing</span>
-                at <span class="extra-play-info"></span>
-                of <span class="jp-duration"></span>, which is
-                <span class="jp-current-time"></span>
-              </div>
-              <div id="seconds">0</div>
+            <div class="footer-bottom">
+                <p>Mixtapé par 
+                    <a href="http://twitter.com/ghislaindj" target="_blank">@ghislaindj</a>, 
+                    <a href="http://beercrying.tumblr.com/">Arnaud</a>,  &amp; 
+                    <a href="http://twitter.com/gsellator" target="_blank">@gsellator</a>.
+                </p>
             </div>
-          </div>
-
-          
-        </div> <!--span12-->
-      </div>
-    </div>
-
-    <footer>
-      <div class="footer-top">
-        <h2>Revivez la soirée du<br/>27 décembre 1997.</h2>
-      </div>
-      <div class="footer-bottom">
-        <p>Mixtapé par <a href="http://twitter.com/ghislaindj" target="_blank">@ghislaindj</a>, <a href="http://beercrying.tumblr.com/">Arnaud</a>,  & <a href="http://twitter.com/gsellator" target="_blank">@gsellator</a>.</p>
-      </div>
-    </footer> 
-
-    <img style="display: none;" src="img/tv-image-1.png">
-    <img style="display: none;" src="img/tv-image-2.png">
-    <img style="display: none;" src="img/tv-image-3.png">
-    <img style="display: none;" src="img/tv-image-4.png">
-    <img style="display: none;" src="img/tv-image-5.png">
-    <img style="display: none;" src="img/tv-image-6.png">
-    <img style="display: none;" src="img/tv-image-7.png">
-    <img style="display: none;" src="img/tv-image-8.png">
-    <img style="display: none;" src="img/tv-image-9.png">
-    
-
-
-    
-    <!--<script src="js/mvm.js"></script>
-    <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
-    <script src="http://cachedcommons.org/cache/jquery-table-sorter/2.0.3/javascripts/jquery-table-sorter.js"></script>-->
-
-  </body>
+        </footer> 
+        <img style="display: none;" src="img/tv-image-1.png">
+        <img style="display: none;" src="img/tv-image-2.png">
+        <img style="display: none;" src="img/tv-image-3.png">
+        <img style="display: none;" src="img/tv-image-4.png">
+        <img style="display: none;" src="img/tv-image-5.png">
+        <img style="display: none;" src="img/tv-image-6.png">
+        <img style="display: none;" src="img/tv-image-7.png">
+        <img style="display: none;" src="img/tv-image-8.png">
+        <img style="display: none;" src="img/tv-image-9.png">
+    </body>
 </html>
