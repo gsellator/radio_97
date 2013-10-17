@@ -419,10 +419,24 @@ td {
         font-size: 40px;
     }
     
+    .anim-block{
+        padding: 15px 0;
+    }
+    
+    .anim-block > div{
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    
 }
 
+@media (min-width: 979px) {
+    nav{
+        height: 45px !important;
+        overflow: hidden !important;
+    }
+}    
+
 nav{
-    height: 45px !important;
-    overflow: hidden !important;
     margin-bottom: 0 !important;
 }
