@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $('.nav').onePageNav({
-      currentClass: 'current',
+      currentClass: 'active',
       changeHash: false,
       scrollSpeed: 750,
       scrollOffset: 30,

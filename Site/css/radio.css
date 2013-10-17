@@ -5,7 +5,7 @@
 }
 
 h1, h2, h4, h5, h6 {
-    font-family: "bello-pro",sans-serif;
+    font-family: "bello-pro",serif;
 }
 
 html {
@@ -133,6 +133,7 @@ td {
     padding-top: 90px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 14px;
 }
 
 .horloge-reflet {
@@ -433,9 +434,12 @@ td {
 @media (min-width: 979px) {
     nav{
         height: 45px !important;
-        overflow: hidden !important;
-    }
-}    
+    }    
+}
+
+.fbpdl{
+    display: none !important;
+}
 
 nav{
     margin-bottom: 0 !important;
