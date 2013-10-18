@@ -2,15 +2,33 @@
     font-family: "futura-pt", sans-serif;
     font-weight: 300;
     font-size: 18px;
+    
+    body{
+        padding: 0;
+    }
+    
+    body, html  {
+        min-width: 450px;
+    }
+    
+    nav{
+        min-width: 450px;
+    }
+    
+    h1, h2, h4, h5, h6 {
+        font-family: "bello-pro",serif;
+    }
+    
+    @media (max-width: 979px) {
+        h1{
+            font-size: 30px;
+        }
+    }
 }
 
-h1, h2, h4, h5, h6 {
-    font-family: "bello-pro",serif;
-}
 
-html {
-    min-width: 450px;
-}
+
+
 
 .logoright{
     float: right !important;
@@ -21,23 +39,31 @@ html {
     margin-top: 10px;
 }
 
-.nav{
+nav, .nav{
     width: 100%;
+    margin: 0 !important;
 }
 
 .nav li{
     float:left;
 }
 
+.body{
+    overflow: hidden;
+    position: absolute;
+}
+
+.wrapper{
+    margin-top: 45px;
+    
+    @media (max-width: 979px) {
+        margin-top: 0;
+    }
+}
 
 .footer-top {
-    font-family: "bello-pro",sans-serif;
-    position: relative;
     height: 220px;
-    margin-bottom: 0px;
     padding: 70px 5% 80px 5%;
-    text-align: left;
-    color: white;
     opacity: .9;
     background-image: url(../img/masthead.png);
     background-position-x: 104%;
@@ -45,13 +71,85 @@ html {
     background-size: 600px;
     background-repeat: no-repeat;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 7px 0px inset, rgba(0, 0, 0, 0.2) 0px -3px 7px 0px inset;
+    
+    @media (max-width: 1199px) {
+        background-size: 520px;
+        height: 170px;
+    }
+    
+    
+    
+    @media (max-width: 979px) {
+        background-image: url(../img/masthead-alt.png);
+        text-align: center;
+        background-size: 540px;
+        background-position: center center;
+        height: 90px;
+        padding-top: 20px;
+    }
+    
+    h2 {
+        color: #333;
+        font-size: 70px;
+        line-height: 85px;
+        text-shadow: rgba(255, 255, 255, 0.9) 0px 1px 3px, rgba(0, 0, 0, 0.1) 0px 0px 30px;
+        
+        @media (max-width: 1199px) {
+            font-size: 60px;
+            line-height: 65px;
+        }
+        
+        @media (max-width: 767px) {
+            font-size: 40px;
+        }
+    }
 }
 
-.footer-top h2 {
-    color: #333;
-    font-size: 70px;
-    line-height: 85px;
-    text-shadow: rgba(255, 255, 255, 0.9) 0px 1px 3px, rgba(0, 0, 0, 0.1) 0px 0px 30px;
+.title{
+    font-size: 60px;
+    line-height: 80px;
+    
+    @media (max-width: 979px) {
+        font-size: 40px;
+        line-height: 60px;
+    }
+    
+    @media (max-width: 767px) {
+        font-size: 32px;
+        line-height: 52px;
+    }
+}
+
+#index{
+    border-bottom: solid #999 6px;
+    text-align: center;
+    
+    .title{
+        display: inline;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 6px 0;
+        box-shadow: -10px 0 0 rgba(255, 255, 255, 0.6), 10px 0 0 rgba(255, 255, 255, 0.6);
+    }
+}
+
+#animateurs{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: solid #999 6px;
+    
+    .title{
+        text-align:center;
+    }
+}
+
+#playlist{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    
+    .title{
+        text-align:center;
+    }
 }
 
 .footer-bottom {
@@ -71,31 +169,35 @@ html {
 
 table {
     border-color: black !important;
-    border-radius: 8px !important;;
+    border-radius: 8px !important;
+    margin-top: 20px;
+    td {
+        border-color: black !important;
+        font-size: 16px;
+        vertical-align: middle !important;
+        
+        &.radio{
+            vertical-align: top !important;
+        }
+    }
 }
 
-td {
-    border-color: black !important;
-}
-
-.bs-docs-example:after{
-    content: none;
-}
-
-.bs-docs-example {
-    padding: 19px 19px 19px;
+.mur {
+    padding-top: 10px;
     background-color: transparent;
     background-image: url(../img/papier-peint.jpeg);
     background-position: center;
-    height: 400px;
     margin-bottom: 0px;
-    margin-top: 30px;
-    /*min-width: 900px;*/
 }
 
 
 
 .spacer50 { height:44px; width: 0px;}
+
+#back{
+    position:absolute;
+    left: 0;
+}
 
 .horloge-cadre{
     width:320px;
@@ -133,7 +235,12 @@ td {
     padding-top: 90px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 14px;
+    
+    img{
+        display: block;
+        float: left;
+        margin-right: 3px;
+    }
 }
 
 .horloge-reflet {
@@ -167,15 +274,16 @@ td {
 
 .surcont{
     background-color: black;
-    padding-bottom: 14px; 
-    margin-bottom: 30px;
-    display: inline-block;
     width: 100%;
+    overflow: hidden;
+    padding-bottom: 12px;
+    
+    .row{
+        margin-left: 0px;
+    }
 }
 
-.surcont .row{
-    margin-left: 0px;
-}
+
 
 .cont{
     float: left;
@@ -188,8 +296,8 @@ td {
 }
 
 .controleurs{
-    padding: 16px 10px 2px 5px;
-    margin-bottom: 30px;
+    padding: 36px 10px 2px 5px;
+    margin-bottom: 10px;
     display: block;
 }
 
@@ -327,25 +435,9 @@ td {
     padding: 10px 15px;
 }
 
-@media (max-width: 1199px) {
-    
-    .footer-top {
-        background-size: 520px;
-        height: 170px;
-    }
-    
-    .footer-top h2 {
-        font-size: 60px;
-        line-height: 65px;
-    }
-}
 
-@media (max-width: 979px) {
-    .footer-top {
-        background-size: 480px;
-        background-position-x: 116%;
-    }
-    
+
+@media (max-width: 979px) {    
     .horloge-cadre{
         margin: auto;
         float: none;
@@ -359,6 +451,10 @@ td {
     menu {
         position: absolute;
         top: -10px;
+    }
+    
+    .container{
+        padding:0 20px;
     }
     
     .surcont{ margin-left: 0px; }
@@ -405,19 +501,6 @@ td {
     footer {
         margin-right: -20px;
         margin-left: -20px;
-    }
-    
-    .footer-top {
-        background-image: url(../img/masthead-alt.png);
-        text-align: center;
-        background-size: 540px;
-        background-position: center center;
-        height: 90px;
-        padding-top: 20px;
-    }
-    
-    .footer-top h2 {
-        font-size: 40px;
     }
     
     .anim-block{

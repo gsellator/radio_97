@@ -17,626 +17,604 @@
         <meta name="twitter:image" content="http://radio97.fr/img/icon.png">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-        <link href="css/docs.css" rel="stylesheet">
-        <link href="css/radio.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
         <link rel="icon" type="image/png" href="favicon.png" />
         <script type="text/javascript" src=" //use.typekit.net/slz3nvc.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-        <script src="js/jquery-1.8.3.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.jplayer.min.js"></script>
-        <script src="js/jquery.noisy.min.js"></script>
-        <script src="js/jquery.nav.js"></script>
-        <script src="js/jquery.scrollTo.js"></script>
-        <script src="js/script.js"></script>
-        <script src="js/radio.js"></script>
-        <script src="js/nav.js"></script>
     </head>
-    
     <body>
-        <script>
-            draw_clock();
-            $('body').noisy({
-                intensity: 1,
-                size: 200,
-                opacity: 0.08,
-                fallback: 'fallback.png',
-                monochrome: false
-            }).css('background-color', '#EDEBDE');
-        </script>
-        
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="active">
-                                <a href="#index">L'émission</a>
-                            </li>
-                            <li class="">
-                                <a href="#animateurs">Les animateurs</a>
-                            </li>
-                            <li class="">
-                                <a href="#playlist">La playlist</a>
-                            </li>
-                            <li class="li-twt">
-                                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://radio97.fr/" data-text="Revivez la soirée du 27 décembre 1997" data-lang="fr" data-count="none">Tweeter</a>
-                            </li>
-                            <li class="li-fb">
-                                <span class="fb-like" data-href="http://www.radio97.fr" data-width="The pixel width of the plugin" data-height="40px" data-colorscheme="dark" data-layout="standard" data-action="like" data-show-faces="false" data-send="false"></span>
-                            </li>
-                            <li class="logoright">
-                                <img src="img/logo.png" alt="Logo radio 97">
-                            </li>
-                        </ul>
+        <div class="body">
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav">
+                                <li class="active">
+                                    <a href="#index">L'émission</a>
+                                </li>
+                                <li class="">
+                                    <a href="#animateurs">Les animateurs</a>
+                                </li>
+                                <li class="">
+                                    <a href="#playlist">La playlist</a>
+                                </li>
+                                <li class="li-twt">
+                                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://radio97.fr/" data-text="Revivez la soirée du 27 décembre 1997" data-lang="fr" data-count="none">Tweeter</a>
+                                </li>
+                                <li class="li-fb">
+                                    <span class="fb-like" data-href="http://www.radio97.fr" data-width="The pixel width of the plugin" data-height="40px" data-colorscheme="dark" data-layout="standard" data-action="like" data-show-faces="false" data-send="false"></span>
+                                </li>
+                                <li class="logoright">
+                                    <img src="img/logo.png" alt="Logo radio 97">
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
-        
-        <div class="container" id="index">
-            <div class="row-fluid">
-                <div class="span12" id="jp_container">
-                    <div class="bs-docs-example">
-                        <div id="jquery_jplayer"></div>
-                        <div class="horloge-cadre">
-                            <div class="horloge-back-leds" id="back-leds">
-                                <div class ="horloge-front-leds" id="background">
-                                    <img src="img/horloge-front-leds.png" id="back" style="position:absolute;clip:rect(0px,0px,0px,0px);">
-                                    <div class ="horloge-chiffres">
-                                        <img id="h-a" src="img/chr-off.png" />
-                                        <img id="h-b" src="img/chr-off.png" />
-                                        <img class="spacer" src="img/spacr-off.png" />
-                                        <img id="m-a" src="img/chr-off.png" />
-                                        <img id="m-b" src="img/chr-off.png" />
+            </nav>
+            
+            <div class="wrapper">
+                <div class="" id="index">
+                    <div class="mur" id="jp_container">
+                        <div class="container">
+                            <div style="margin: 0 0 20px 0;">
+                                <h2 class="title">27 décembre 1997, début de soirée.</h2>
+                            </div>
+                            <div id="jquery_jplayer"></div>
+                            <div class="horloge-cadre">
+                                <div class="horloge-back-leds" id="back-leds">
+                                    <div class ="horloge-front-leds" id="background">
+                                        <img src="img/horloge-front-leds.png" id="back" style="clip:rect(0px,0px,0px,0px);">
+                                        <div class ="horloge-chiffres">
+                                            <img id="h-a" src="img/chr-off.png" style="margin-left: 3px;" />
+                                            <img id="h-b" src="img/chr-off.png"/>
+                                            <img class="spacer" src="img/spacr-off.png"/>
+                                            <img id="m-a" src="img/chr-off.png"/>
+                                            <img id="m-b" src="img/chr-off.png"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="horloge-reflet"></div>
+                            </div>
+                            <div class="visible-desktop">
+                                <div class="tv-fond" style="">
+                                    <div class="tv-image" id="tv-image" style="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="horloge-reflet"></div>
-                        </div>
-                        <div class="visible-desktop">
-                            <div class="tv-fond" style="">
-                                <div class="tv-image" id="tv-image" style="">
+                            <div class="controleurs">
+                                <ul>
+                                    <li>
+                                        <a class="btn jp-play" href="#">
+                                            <i class="icon-play"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="btn jp-pause" href="#">
+                                            <i class="icon-pause"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="btn jp-stop" href="#" style="margin-right: 8px;">
+                                            <i class="icon-stop"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="progress">
+                                    <div id="progress-bar" class="bar" style="width: 0%;"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="controleurs">
-                            <ul>
-                                <li>
-                                    <a class="btn jp-play" href="#">
-                                        <i class="icon-play"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="btn jp-pause" href="#">
-                                        <i class="icon-pause"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="btn jp-stop" href="#" style="margin-right: 8px;">
-                                        <i class="icon-stop"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="progress">
-                                <div id="progress-bar" class="bar" style="width: 0%;"></div>
+                        <div class="surcont" >
+                            <div class="prog">
+                                <div class="demiprog demiprog1">
+                                    <img src="img/chrono-1.png">
+                                    <ul class="pistes" >
+                                        <li class="piste1"><a href="mp3/1-Europe2.mp3" class="btn-piste track track-default">Europe 2</a></li>
+                                        <li class="piste2"><a href="mp3/2-NRJ.mp3" class="btn-piste track">NRJ</a></li>
+                                        <li class="piste3"><a href="mp3/3-ChanteFrance.mp3" class="btn-piste btn-two-line track">Chante<br>France</a></li>
+                                        <li class="piste4"><a href="mp3/4-Nova.mp3" class="btn-piste track">Nova</a></li>
+                                    </ul>
+                                </div>
+                                <div class="demiprog demiprog2">
+                                    <img src="img/chrono-2.png">
+                                    <ul class="pistes">
+                                        <li class="piste5"><a href="mp3/5-StyleFM.mp3" class="btn-piste track">Style FM</a></li>
+                                        <li class="piste6"><a href="mp3/6-Skyrock.mp3" class="btn-piste track">Skyrock</a></li>
+                                        <li class="piste7"><a href="mp3/7-Nostalgie.mp3" class="btn-piste track">Nostalgie</a></li>
+                                        <li class="piste8"><a href="mp3/8-Fun.mp3" class="btn-piste track">Fun Radio</a></li>
+                                        <li class="piste9"><a href="mp3/9-Latina.mp3" class="btn-piste btn-two-line track">Radio<br>Latina</a></li>
+                                    </ul> 
+                                </div>
+                            </div>
+                            <div class="hidden">
+                                <div>
+                                    <span id="extra-play-info" class="hidden extra-play-info"></span>
+                                    <span class="play-state"></span> :
+                                    <span class="track-name">nothing</span>
+                                    at <span class="extra-play-info"></span>
+                                    of <span class="jp-duration"></span>, which is
+                                    <span class="jp-current-time"></span>
+                                </div>
+                                <div id="seconds">0</div>
                             </div>
                         </div>
                     </div>
-                    <div class="surcont" >
-                        <div class="prog">
-                            <div class="demiprog demiprog1">
-                                <img src="img/chrono-1.png">
-                                <ul class="pistes" >
-                                    <li class="piste1"><a href="mp3/1-Europe2.mp3" class="btn-piste track track-default">Europe 2</a></li>
-                                    <li class="piste2"><a href="mp3/2-NRJ.mp3" class="btn-piste track">NRJ</a></li>
-                                    <li class="piste3"><a href="mp3/3-ChanteFrance.mp3" class="btn-piste btn-two-line track">Chante<br>France</a></li>
-                                    <li class="piste4"><a href="mp3/4-Nova.mp3" class="btn-piste track">Nova</a></li>
-                                </ul>
-                            </div>
-                            <div class="demiprog demiprog2">
-                                <img src="img/chrono-2.png">
-                                <ul class="pistes">
-                                    <li class="piste5"><a href="mp3/5-StyleFM.mp3" class="btn-piste track">Style FM</a></li>
-                                    <li class="piste6"><a href="mp3/6-Skyrock.mp3" class="btn-piste track">Skyrock</a></li>
-                                    <li class="piste7"><a href="mp3/7-Nostalgie.mp3" class="btn-piste track">Nostalgie</a></li>
-                                    <li class="piste8"><a href="mp3/8-Fun.mp3" class="btn-piste track">Fun Radio</a></li>
-                                    <li class="piste9"><a href="mp3/9-Latina.mp3" class="btn-piste btn-two-line track">Radio<br>Latina</a></li>
-                                </ul> 
-                            </div>
-                        </div>
-                        <div class="hidden">
-                            <div>
-                                <span id="extra-play-info" class="hidden extra-play-info"></span>
-                                <span class="play-state"></span> :
-                                <span class="track-name">nothing</span>
-                                at <span class="extra-play-info"></span>
-                                of <span class="jp-duration"></span>, which is
-                                <span class="jp-current-time"></span>
-                            </div>
-                            <div id="seconds">0</div>
-                        </div>
-                    </div>
-                </div> <!--span12-->
-            </div>
-        </div>
-        <div>
-            <div class="footer-top">
-                <h2>Revivez la soirée du<br/>27 décembre 1997.</h2>
-            </div>  
-        </div>
-        <div id="animateurs">
-            <div class="row-fluid" style="margin-top: 20px;">
-                <div class="span10 offset1">
-                    <div class="row-fluid anim-block">
-                        <div class="span2 offset1">
-                            <h1>Nrj</h1>
-                        </div>
-                        <div class="span8">
-                            <h3>Sam Z (aka Le phénomène), animateur principal</h3>
-                            <p>Né à Auxerre en 1951 de parents immigrés italiens, Samuel Zenatti n’a pas toujours été l’animateur radio le plus populaire chez les 18-25 ans. Très jeune, il fait l’école buissonnière, fugue des pensionnats où ses parents l’inscrivent et se fait remarquer pour des petits larcins. Déscolarisé dès ses 16 ans, il passe ses journées dehors entre petits vols et oisiveté.</p>
-                            <p>A 20 ans, il effectue son premier séjour en prison après avoir volé des stupéfiants dans une pharmacie de Dijon. Dépendant à plusieurs drogues, maitre de lui même seulement quelques heures par jour, il sombre un peu plus dans le désespoir en 1989 lorsque sa petite amie de l’époque décède d’une overdose à ses cotés, trop inconscient pour se rendre compte de quoi que ce soit. Cet évènement tragique agit sur lui comme un électrochoc, après un nouveau séjour en prison pour non assistance à personne en danger et une injonction à se soigner, il débute une cure de désintoxication.</p>
-                            <p>Utilisant le théâtre d’improvisation et l’expression corporelle comme thérapies, il est remarqué par un recruteur de Skyrock au cours d’un spectacle à la MJC de Créteil. D’abord responsable de la skyroulette, son ascension est fulgurante et il s’engage en grandes pompes sur NRJ en 1994. Sous le pseudo de Sam Z, il devient rapidement l’animateur vedette de la station.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row-fluid">
-                <div class="span10 offset1">
-                    <div class="row-fluid anim-block">
-                        <div class="span2 offset1">
-                            <h1>Europe 2</h1>
-                        </div>
-                        <div class="span8">
-                            <h3>Damien Loubert (aka Damien), animateur principal</h3>
-                            <p>Né à Saint-Etienne en 1962 au sein d’une famille modeste mais aimante, Damien Loubert se passionne très vite pour les médias et la musique. Grand amateur de rock, guitariste talentueux d’un groupe local faisant le tour de la région dès l'âge de 15 ans, il devient vite le présentateur vedette de la radio du Lycée Edmond Rostand de Saint-Etienne.</p>
-                            <p>Dès son inscription en sciences des médias et de la communication à la faculté Lyon II il multiplie les petits boulots auprès des radios libres locales qui sont alors en pleine expansion. Ses études terminées, il tente alors sa chance à Paris en 1985. Après un an de galère, la toute nouvelle station Europe 2, qui vient d’être créée, lui ouvre ses portes et lui offre enfin sa chance.</p>
-                            <p>Débute alors une ascension hors du commun : stagiaire régie, opérateur, assistant régisseur, réalisateur remplaçant, présentateur météo, il est même chauffeur-livreur ou standardiste l’espace de quelques semaines. Autant de réussite qui lui font toucher le Grall en 1996, après un an à animer la matinale en compagnie de Yann Arribard, il devient le nouvel animateur des soirées de Europe 2.</p>
-                            
-                            <h3>Matthieu Chauvet, présentateur flash info</h3>
-                            <p>Diplômé de Sciences Po et de la prestigieuse Ecole Supérieure de Journalisme de Paris, Matthieu Chauvet débute à la radio en 1994 sur la grande soeur Europe 1 en tant que correspondant local à Strasbourg. C’est début 1997 qu’il monte en grade et devient responsable des flash info sur Europe 2. Il est un des jeunes journalistes les plus prometteurs du groupe.</p>
-                            
-                            <h3>Sam, stagiaire météo</h3>
-                            <p>Passionné d’audiovisuel, neveu de Laurent Boyer, en échec scolaire, Sam est le stagiaire des émissions du soir sur Europe 2, après quelques mois à répondre aux appels reçus au cours de l’émission, il est chargé du point météo par Damien Loubert. Souffre douleur préféré des animateurs, il partage sa bonne humeur avec tous les auditeurs.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row-fluid">
-                <div class="span10 offset1">
-                    <div class="row-fluid anim-block">
-                        <div class="span2 offset1">
-                            <h1>Nova</h1>
-                        </div>
-                        <div class="span8">
-                            <h3>Zakaria Boualem (aka Zak), animateur principal</h3>
-                            <p>Né, scolarisé et ayant vécu toute sa vie à Stains en Seine-Saint-Denis, le jeune Zakaria a toujours été en décalage avec son entourage. Discret, timide maladif, il se passionne très jeune pour les arts, la musique de 1900 à nos jours et les paradis artificiels.</p>
-                            <p>Doté d’un univers intérieur très riche et d’un vrai sens artistique, il gagne sa vie en réalisant des fresques et des affiches pour diverses manifestations locales. Repéré par Jean-François Bizot au début de l’année 1994 au cours d’une rencontre sur le thème «Arts primitifs et banlieues» qu’il anime, les deux hommes se lient d’amitié très rapidement.</p>
-                            <p>Après plusieurs voyages qu’ils réalisent ensemble en Afrique (Zakaria n’a alors jamais quitté l’Ile de France) et des rumeurs persistantes sur une relation amoureuse entre les deux hommes, Zak est engagé par son mentor comme animateur sur Radio Nova. Il y trouve alors un nouveau terrain d’expression et partage librement ses gouts et ses passions avec les auditeurs exigeants de la radio libre.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container" id="playlist">
-            <div class="row">
-                <div class="span12">
-                    <section id="">
-                        <div class="">
-                            <table class="table table-bordered ">
-                                <tbody>
-                                    <tr>
-                                        <td rowspan="7" style="border-top-left-radius: 8px;">Europe 2</td>
-                                        <td>20:00:00</td>
-                                        <td>Flash info</td>
-                                        <td>Interviews extraites du 20h de France 2 du 27/12/1997 (<a href="http://www.ina.fr/">ina.fr</a>)</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>20:03:14</td>
-                                        <td>Météo</td>
-                                        <td>Météo constatée du 28/12/1997 (<a href="http://www.infoclimat.fr/">infoclimat.fr</a>)</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>20:04:09</td>
-                                        <td>Noir Désir : L'Homme Pressé</td>
-                                        <td>666.667 Club (1997)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/lhomme-presse/id68370640?i=68370732">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>20:09:29</td>
-                                        <td>Louise Attaque : Léa</td>
-                                        <td>Louise Attaque (1997)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/lea/id68044694?i=68044740">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>20:12:50</td>
-                                        <td>Chumbawamba : Tubthumping</td>
-                                        <td>Tubthumper (1997)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/tubthumping/id250261984?i=250261985">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>20:16:09</td>
-                                        <td>Hanson : MMMBop</td>
-                                        <td>Middle Of Nowhere (1997)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/mmmbop/id91888154?i=91888157">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>20:20:35</td>
-                                        <td>Radiohead : Karma Police</td>
-                                        <td>OK Computer (1997)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/karma-police/id18421725?i=18421679">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Radio Ici & Maintenant</td>
-                                        <td>20:24:50</td>
-                                        <td>Extrait</td>
-                                        <td>Archive (1981 - <a href="http://www.schoop.fr/">schoop.fr</a>)</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td rowspan="6">NRJ</td>
-                                        <td>20:25:05</td>
-                                        <td>Aqua : Barbie Girl</td>
-                                        <td>Aquarium (1997)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/barbie-girl/id13124923?i=13606182">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>20:29:55</td>
-                                        <td>Cake : I Will Survive</td>
-                                        <td>Fashion Nugget (1996)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/i-will-survive/id254347645?i=254348039">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>20:35:02</td>
-                                        <td>No doubt : Don't Speak</td>
-                                        <td>Tragic Kingdom (1995)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/dont-speak/id14173917?i=14173925">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>20:39:59</td>
-                                        <td>Spice Girls : Wannabe</td>
-                                        <td>Spice (1996)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/wannabe/id17943924?i=17943904">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>20:43:10</td>
-                                        <td>Sequential One : My Love Is Hot</td>
-                                        <td>My Love Is Hot (1997)</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>20:47:25</td>
-                                        <td>Annonce NRJ</td>
-                                        <td>Archive Soutien de Rire et Chansons contre le CSA (1997 - <a href="http://www.schoop.fr/">schoop.fr</a>)</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Radio Courtoisie</td>
-                                        <td>20:48:25</td>
-                                        <td>Jingle</td>
-                                        <td>Archive (1988 - <a href="http://www.schoop.fr/">schoop.fr</a>)</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td rowspan="3">Chante France</td>
-                                        <td>20:48:41</td>
-                                        <td>Gérard Palaprat : Pour La Fin Du Monde</td>
-                                        <td>Fais Moi Un Signe (1997)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/pour-la-fin-du-monde/id250182999?i=250183011">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>20:51:57</td>
-                                        <td>Florent Pagny : Savoir Aimer</td>
-                                        <td>Savoir Aimer (1997)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/savoir-aimer/id14769335?i=14769337">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>20:56:36</td>
-                                        <td>Jean-Jacques Goldman : Bonne Idée</td>
-                                        <td>En passant (1997)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/bonne-idee/id253563964?i=253564014">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td rowspan="5">Nova</td>
-                                        <td>21:00:00</td>
-                                        <td>Howie B : Take Your Partner By The Hand</td>
-                                        <td>Turn the Dark Off (1997)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/take-your-partner-by-hand/id14450948?i=14450962">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>21:05:26</td>
-                                        <td>Air : Sexy Boy</td>
-                                        <td>Moon Safari (1998)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/sexy-boy/id15810975?i=15810953">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>21:10:29</td>
-                                        <td>GZA : Liquid Swords</td>
-                                        <td>Liquid Swords (1995)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/liquid-swords/id14442309?i=14442313">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>21:14:28</td>
-                                        <td>Alain Bashung : La Nuit Je Mens</td>
-                                        <td>Fantaisie Militaire (1998)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/la-nuit-je-mens/id13453379?i=13627791">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>21:19:01</td>
-                                        <td>Daft Punk : Around The World</td>
-                                        <td>Homework (1996)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/around-the-world/id17523648?i=17523585">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td rowspan="3">Style FM</td>
-                                        <td>21:26:04</td>
-                                        <td>Publicité</td>
-                                        <td>Archive (<a href="http://stylefm.free.fr/">stylefm.free.fr</a>)</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>21:26:37</td>
-                                        <td>Le mini disque</td>
-                                        <td>Archive Style FM (<a href="http://stylefm.free.fr/">stylefm.free.fr</a>)</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>21:28:05</td>
-                                        <td>M People : Sight For Sore Eyes</td>
-                                        <td>Bizarre Fruit, Vol. 2 (1995)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/sight-for-sore-eyes/id254876301?i=254876439">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td rowspan="5">Skyrock</td>
-                                        <td>21:31:52</td>
-                                        <td>MC Solaar : Paradisiaque</td>
-                                        <td>Paradisiaque (1997)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/paradisiaque/id142884704?i=142884715">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>21:37:07</td>
-                                        <td>Alliance Ethnik : Simple & Funcky</td>
-                                        <td>Simple & Funky (1995)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/simple-funky/id17727305?i=17727294">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>21:40:51</td>
-                                        <td>Akhenaton : Bad Boys De Marseille (Part II)</td>
-                                        <td>Métèque et Mat (1996)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/bad-boys-de-marseille-pt.-ii/id17563509?i=17563391">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>21:44:38</td>
-                                        <td>Doc Gyneco : Nirvana</td>
-                                        <td>Première consultation (1996)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/nirvana/id17579237?i=17579178">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>:21:50:04</td>
-                                        <td>Aaliyah : If Your Girl Only Knew</td>
-                                        <td>One in a Million (1996)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/if-your-girl-only-knew/id317247933?i=317247971">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td rowspan="4">Nostalgie</td>
-                                        <td>21:53:30</td>
-                                        <td>Serge Gainsbourg : Mon légionnaire</td>
-                                        <td>You're under arrest (1987)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/mon-legionnaire/id83834492?i=83834558">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>21:59:40</td>
-                                        <td>Guns N' Roses : Sweet Child O' Mine</td>
-                                        <td>Appetite For Destruction (1987)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/sweet-child-o-mine/id14395888?i=14395926">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>22:05:42</td>
-                                        <td>Barry White : You're the First, the Last, my Everything</td>
-                                        <td>Can't Get Enough (1974)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/youre-first-last-my-everything/id14157806?i=14157844">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>22:10:22</td>
-                                        <td>Barbara : L'Aigle Noir</td>
-                                        <td>L'Aigle Noir (1970)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/laigle-noir/id398490426?i=398490573">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Radio Be Bop</td>
-                                        <td>22:15:03</td>
-                                        <td>Extrait</td>
-                                        <td>Archive (1983 - <a href="http://www.schoop.fr/">schoop.fr</a>)</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td rowspan="3">Fun Radio</td>
-                                        <td>22:16:00</td>
-                                        <td>Puff Daddy : I'll Be Missing You</td>
-                                        <td>No Way Out (1997)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/ill-be-missing-you-feat.-faith/id78988973?i=78988963">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>22:21:03</td>
-                                        <td>Usher : You Make Me Wanna</td>
-                                        <td>My Way (1997)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/you-make-me-wanna.../id278845426?i=278845473">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>22:26:16</td>
-                                        <td>White Town : Your Woman</td>
-                                        <td>Women In Technology (1997)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/your-woman/id18699314?i=18699250">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td rowspan="2" style="border-bottom-left-radius: 8px;">Radio Latina</td>
-                                        <td>22:30:35</td>
-                                        <td>Bellini : Samba De Janeiro</td>
-                                        <td>Samba de Janeiro (1997)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/samba-de-janeiro/id283742288?i=283742305">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>22:34:27</td>
-                                        <td>Ricky Martin : (Un, Dos, Tres) Maria</td>
-                                        <td>A Medio Vivir (1995)</td>
-                                        <td>
-                                            <a href="https://itunes.apple.com/fr/album/maria/id278266866?i=278266973">
-                                                <i class="icon-download"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
+                    
                 </div>
                 
+                
+                <div id="animateurs">
+                    <div class="container">
+                        <h1 class="title">Les équipes du 27 décembre</h1>
+                        <div class="row-fluid anim-block">
+                            <div class="span3 offset1">
+                                <h1>Nrj</h1>
+                            </div>
+                            <div class="span7">
+                                <h3>Sam Z (aka Le phénomène), animateur principal</h3>
+                                <p>Né à Auxerre en 1951 de parents immigrés italiens, Samuel Zenatti n’a pas toujours été l’animateur radio le plus populaire chez les 18-25 ans. Très jeune, il fait l’école buissonnière, fugue des pensionnats où ses parents l’inscrivent et se fait remarquer pour des petits larcins. Déscolarisé dès ses 16 ans, il passe ses journées dehors entre petits vols et oisiveté.</p>
+                                <p>A 20 ans, il effectue son premier séjour en prison après avoir volé des stupéfiants dans une pharmacie de Dijon. Dépendant à plusieurs drogues, maitre de lui même seulement quelques heures par jour, il sombre un peu plus dans le désespoir en 1989 lorsque sa petite amie de l’époque décède d’une overdose à ses cotés, trop inconscient pour se rendre compte de quoi que ce soit. Cet évènement tragique agit sur lui comme un électrochoc, après un nouveau séjour en prison pour non assistance à personne en danger et une injonction à se soigner, il débute une cure de désintoxication.</p>
+                                <p>Utilisant le théâtre d’improvisation et l’expression corporelle comme thérapies, il est remarqué par un recruteur de Skyrock au cours d’un spectacle à la MJC de Créteil. D’abord responsable de la skyroulette, son ascension est fulgurante et il s’engage en grandes pompes sur NRJ en 1994. Sous le pseudo de Sam Z, il devient rapidement l’animateur vedette de la station.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row-fluid anim-block">
+                            <div class="span3 offset1">
+                                <h1>Europe 2</h1>
+                            </div>
+                            <div class="span7">
+                                <h3>Damien Loubert (aka Damien), animateur principal</h3>
+                                <p>Né à Saint-Etienne en 1962 au sein d’une famille modeste mais aimante, Damien Loubert se passionne très vite pour les médias et la musique. Grand amateur de rock, guitariste talentueux d’un groupe local faisant le tour de la région dès l'âge de 15 ans, il devient vite le présentateur vedette de la radio du Lycée Edmond Rostand de Saint-Etienne.</p>
+                                <p>Dès son inscription en sciences des médias et de la communication à la faculté Lyon II il multiplie les petits boulots auprès des radios libres locales qui sont alors en pleine expansion. Ses études terminées, il tente alors sa chance à Paris en 1985. Après un an de galère, la toute nouvelle station Europe 2, qui vient d’être créée, lui ouvre ses portes et lui offre enfin sa chance.</p>
+                                <p>Débute alors une ascension hors du commun : stagiaire régie, opérateur, assistant régisseur, réalisateur remplaçant, présentateur météo, il est même chauffeur-livreur ou standardiste l’espace de quelques semaines. Autant de réussite qui lui font toucher le Grall en 1996, après un an à animer la matinale en compagnie de Yann Arribard, il devient le nouvel animateur des soirées de Europe 2.</p>
+                                
+                                <h3>Matthieu Chauvet, présentateur flash info</h3>
+                                <p>Diplômé de Sciences Po et de la prestigieuse Ecole Supérieure de Journalisme de Paris, Matthieu Chauvet débute à la radio en 1994 sur la grande soeur Europe 1 en tant que correspondant local à Strasbourg. C’est début 1997 qu’il monte en grade et devient responsable des flash info sur Europe 2. Il est un des jeunes journalistes les plus prometteurs du groupe.</p>
+                                
+                                <h3>Sam, stagiaire météo</h3>
+                                <p>Passionné d’audiovisuel, neveu de Laurent Boyer, en échec scolaire, Sam est le stagiaire des émissions du soir sur Europe 2, après quelques mois à répondre aux appels reçus au cours de l’émission, il est chargé du point météo par Damien Loubert. Souffre douleur préféré des animateurs, il partage sa bonne humeur avec tous les auditeurs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row-fluid anim-block">
+                            <div class="span3 offset1">
+                                <h1>Nova</h1>
+                            </div>
+                            <div class="span7">
+                                <h3>Zakaria Boualem (aka Zak), animateur principal</h3>
+                                <p>Né, scolarisé et ayant vécu toute sa vie à Stains en Seine-Saint-Denis, le jeune Zakaria a toujours été en décalage avec son entourage. Discret, timide maladif, il se passionne très jeune pour les arts, la musique de 1900 à nos jours et les paradis artificiels.</p>
+                                <p>Doté d’un univers intérieur très riche et d’un vrai sens artistique, il gagne sa vie en réalisant des fresques et des affiches pour diverses manifestations locales. Repéré par Jean-François Bizot au début de l’année 1994 au cours d’une rencontre sur le thème «Arts primitifs et banlieues» qu’il anime, les deux hommes se lient d’amitié très rapidement.</p>
+                                <p>Après plusieurs voyages qu’ils réalisent ensemble en Afrique (Zakaria n’a alors jamais quitté l’Ile de France) et des rumeurs persistantes sur une relation amoureuse entre les deux hommes, Zak est engagé par son mentor comme animateur sur Radio Nova. Il y trouve alors un nouveau terrain d’expression et partage librement ses gouts et ses passions avec les auditeurs exigeants de la radio libre.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="playlist">
+                    <div class="container">
+                        <h1 class="title">Le son du 27 décembre</h1>
+                        <div class="row">
+                            <div class="span12">
+                                <section id="">
+                                    <div class="">
+                                        <table class="table table-bordered ">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="radio" rowspan="7" style="border-top-left-radius: 8px;">Europe 2</td>
+                                                    <td>20:00:00</td>
+                                                    <td>Flash info</td>
+                                                    <td>Interviews extraites du 20h de France 2 du 27/12/1997 (<a href="http://www.ina.fr/">ina.fr</a>)</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20:03:14</td>
+                                                    <td>Météo</td>
+                                                    <td>Météo constatée du 28/12/1997 (<a href="http://www.infoclimat.fr/">infoclimat.fr</a>)</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20:04:09</td>
+                                                    <td>Noir Désir : L'Homme Pressé</td>
+                                                    <td>666.667 Club (1997)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/lhomme-presse/id68370640?i=68370732">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20:09:29</td>
+                                                    <td>Louise Attaque : Léa</td>
+                                                    <td>Louise Attaque (1997)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/lea/id68044694?i=68044740">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20:12:50</td>
+                                                    <td>Chumbawamba : Tubthumping</td>
+                                                    <td>Tubthumper (1997)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/tubthumping/id250261984?i=250261985">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20:16:09</td>
+                                                    <td>Hanson : MMMBop</td>
+                                                    <td>Middle Of Nowhere (1997)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/mmmbop/id91888154?i=91888157">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20:20:35</td>
+                                                    <td>Radiohead : Karma Police</td>
+                                                    <td>OK Computer (1997)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/karma-police/id18421725?i=18421679">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="radio">Radio Ici &amp; Maintenant</td>
+                                                    <td>20:24:50</td>
+                                                    <td>Extrait</td>
+                                                    <td>Archive (1981 - <a href="http://www.schoop.fr/">schoop.fr</a>)</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="radio" rowspan="6">NRJ</td>
+                                                    <td>20:25:05</td>
+                                                    <td>Aqua : Barbie Girl</td>
+                                                    <td>Aquarium (1997)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/barbie-girl/id13124923?i=13606182">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20:29:55</td>
+                                                    <td>Cake : I Will Survive</td>
+                                                    <td>Fashion Nugget (1996)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/i-will-survive/id254347645?i=254348039">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20:35:02</td>
+                                                    <td>No doubt : Don't Speak</td>
+                                                    <td>Tragic Kingdom (1995)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/dont-speak/id14173917?i=14173925">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20:39:59</td>
+                                                    <td>Spice Girls : Wannabe</td>
+                                                    <td>Spice (1996)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/wannabe/id17943924?i=17943904">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20:43:10</td>
+                                                    <td>Sequential One : My Love Is Hot</td>
+                                                    <td>My Love Is Hot (1997)</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20:47:25</td>
+                                                    <td>Annonce NRJ</td>
+                                                    <td>Archive Soutien de Rire et Chansons contre le CSA (1997 - <a href="http://www.schoop.fr/">schoop.fr</a>)</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="radio">Radio Courtoisie</td>
+                                                    <td>20:48:25</td>
+                                                    <td>Jingle</td>
+                                                    <td>Archive (1988 - <a href="http://www.schoop.fr/">schoop.fr</a>)</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="radio" rowspan="3">Chante France</td>
+                                                    <td>20:48:41</td>
+                                                    <td>Gérard Palaprat : Pour La Fin Du Monde</td>
+                                                    <td>Fais Moi Un Signe (1997)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/pour-la-fin-du-monde/id250182999?i=250183011">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20:51:57</td>
+                                                    <td>Florent Pagny : Savoir Aimer</td>
+                                                    <td>Savoir Aimer (1997)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/savoir-aimer/id14769335?i=14769337">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20:56:36</td>
+                                                    <td>Jean-Jacques Goldman : Bonne Idée</td>
+                                                    <td>En passant (1997)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/bonne-idee/id253563964?i=253564014">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="radio" rowspan="5">Nova</td>
+                                                    <td>21:00:00</td>
+                                                    <td>Howie B : Take Your Partner By The Hand</td>
+                                                    <td>Turn the Dark Off (1997)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/take-your-partner-by-hand/id14450948?i=14450962">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>21:05:26</td>
+                                                    <td>Air : Sexy Boy</td>
+                                                    <td>Moon Safari (1998)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/sexy-boy/id15810975?i=15810953">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>21:10:29</td>
+                                                    <td>GZA : Liquid Swords</td>
+                                                    <td>Liquid Swords (1995)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/liquid-swords/id14442309?i=14442313">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>21:14:28</td>
+                                                    <td>Alain Bashung : La Nuit Je Mens</td>
+                                                    <td>Fantaisie Militaire (1998)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/la-nuit-je-mens/id13453379?i=13627791">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>21:19:01</td>
+                                                    <td>Daft Punk : Around The World</td>
+                                                    <td>Homework (1996)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/around-the-world/id17523648?i=17523585">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="radio" rowspan="3">Style FM</td>
+                                                    <td>21:26:04</td>
+                                                    <td>Publicité</td>
+                                                    <td>Archive (<a href="http://stylefm.free.fr/">stylefm.free.fr</a>)</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>21:26:37</td>
+                                                    <td>Le mini disque</td>
+                                                    <td>Archive Style FM (<a href="http://stylefm.free.fr/">stylefm.free.fr</a>)</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>21:28:05</td>
+                                                    <td>M People : Sight For Sore Eyes</td>
+                                                    <td>Bizarre Fruit, Vol. 2 (1995)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/sight-for-sore-eyes/id254876301?i=254876439">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="radio" rowspan="5">Skyrock</td>
+                                                    <td>21:31:52</td>
+                                                    <td>MC Solaar : Paradisiaque</td>
+                                                    <td>Paradisiaque (1997)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/paradisiaque/id142884704?i=142884715">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>21:37:07</td>
+                                                    <td>Alliance Ethnik : Simple & Funcky</td>
+                                                    <td>Simple & Funky (1995)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/simple-funky/id17727305?i=17727294">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>21:40:51</td>
+                                                    <td>Akhenaton : Bad Boys De Marseille (Part II)</td>
+                                                    <td>Métèque et Mat (1996)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/bad-boys-de-marseille-pt.-ii/id17563509?i=17563391">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>21:44:38</td>
+                                                    <td>Doc Gyneco : Nirvana</td>
+                                                    <td>Première consultation (1996)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/nirvana/id17579237?i=17579178">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>:21:50:04</td>
+                                                    <td>Aaliyah : If Your Girl Only Knew</td>
+                                                    <td>One in a Million (1996)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/if-your-girl-only-knew/id317247933?i=317247971">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="radio" rowspan="4">Nostalgie</td>
+                                                    <td>21:53:30</td>
+                                                    <td>Serge Gainsbourg : Mon légionnaire</td>
+                                                    <td>You're under arrest (1987)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/mon-legionnaire/id83834492?i=83834558">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>21:59:40</td>
+                                                    <td>Guns N' Roses : Sweet Child O' Mine</td>
+                                                    <td>Appetite For Destruction (1987)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/sweet-child-o-mine/id14395888?i=14395926">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>22:05:42</td>
+                                                    <td>Barry White : You're the First, the Last, my Everything</td>
+                                                    <td>Can't Get Enough (1974)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/youre-first-last-my-everything/id14157806?i=14157844">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>22:10:22</td>
+                                                    <td>Barbara : L'Aigle Noir</td>
+                                                    <td>L'Aigle Noir (1970)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/laigle-noir/id398490426?i=398490573">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="radio">Radio Be Bop</td>
+                                                    <td>22:15:03</td>
+                                                    <td>Extrait</td>
+                                                    <td>Archive (1983 - <a href="http://www.schoop.fr/">schoop.fr</a>)</td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="radio" rowspan="3">Fun Radio</td>
+                                                    <td>22:16:00</td>
+                                                    <td>Puff Daddy : I'll Be Missing You</td>
+                                                    <td>No Way Out (1997)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/ill-be-missing-you-feat.-faith/id78988973?i=78988963">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>22:21:03</td>
+                                                    <td>Usher : You Make Me Wanna</td>
+                                                    <td>My Way (1997)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/you-make-me-wanna.../id278845426?i=278845473">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>22:26:16</td>
+                                                    <td>White Town : Your Woman</td>
+                                                    <td>Women In Technology (1997)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/your-woman/id18699314?i=18699250">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="radio" rowspan="2" style="border-bottom-left-radius: 8px;">Radio Latina</td>
+                                                    <td>22:30:35</td>
+                                                    <td>Bellini : Samba De Janeiro</td>
+                                                    <td>Samba de Janeiro (1997)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/samba-de-janeiro/id283742288?i=283742305">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>22:34:27</td>
+                                                    <td>Ricky Martin : (Un, Dos, Tres) Maria</td>
+                                                    <td>A Medio Vivir (1995)</td>
+                                                    <td>
+                                                        <a href="https://itunes.apple.com/fr/album/maria/id278266866?i=278266973">
+                                                            <i class="icon-download"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="footer-top">
+                        <h2>Revivez la soirée du<br>27 décembre 1997.</h2>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>Mixtapé par 
+                            <a href="http://twitter.com/ghislaindj" target="_blank">@ghislaindj</a>, 
+                            <a href="http://beercrying.tumblr.com/">Arnaud</a>,  &amp; 
+                            <a href="http://twitter.com/gsellator" target="_blank">@gsellator</a>.
+                        </p>
+                    </div>
+                </footer> 
             </div>
         </div>
-        
-        <footer>
-            <div class="footer-top">
-                <h2>Revivez la soirée du<br/>27 décembre 1997.</h2>
-            </div>
-            <div class="footer-bottom">
-                <p>Mixtapé par 
-                    <a href="http://twitter.com/ghislaindj" target="_blank">@ghislaindj</a>, 
-                    <a href="http://beercrying.tumblr.com/">Arnaud</a>,  &amp; 
-                    <a href="http://twitter.com/gsellator" target="_blank">@gsellator</a>.
-                </p>
-            </div>
-        </footer> 
+        <img style="display: none;" src="img/tv-image-0.png">
         <img style="display: none;" src="img/tv-image-1.png">
         <img style="display: none;" src="img/tv-image-2.png">
         <img style="display: none;" src="img/tv-image-3.png">
@@ -647,6 +625,25 @@
         <img style="display: none;" src="img/tv-image-8.png">
         <img style="display: none;" src="img/tv-image-9.png">
     </body>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.jplayer.min.js"></script>
+    <script src="js/jquery.noisy.min.js"></script>
+    <script src="js/jquery.nav.min.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <script src="js/radio.min.js"></script>
+    <script src="js/nav.min.js"></script>
+    <script>
+        draw_clock();
+        $('body').noisy({
+            intensity: 1,
+            size: 200,
+            opacity: 0.08,
+            fallback: 'fallback.png',
+            monochrome: false
+        }).css('background-color', '#EDEBDE');
+    </script>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
@@ -656,4 +653,12 @@
     js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-44958028-1', 'radio97.fr');
+        ga('send', 'pageview');
+    </script>
 </html>
