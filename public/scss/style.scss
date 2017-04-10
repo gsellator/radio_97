@@ -50,7 +50,7 @@ nav, .nav{
 
 .body{
   overflow: hidden;
-  position: absolute;
+  //position: absolute;
 }
 
 .wrapper{
@@ -277,6 +277,11 @@ table {
   width: 100%;
   overflow: hidden;
   padding-bottom: 12px;
+  
+  .prog{
+        max-width: 1400px;
+    margin: auto;
+  }
 
   .row{
     margin-left: 0px;
