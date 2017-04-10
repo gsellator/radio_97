@@ -32,7 +32,7 @@ nav, .nav {
   overflow: hidden; }
 
 .wrapper {
-  margin-top: 45px; }
+  margin-top: 40px; }
   @media (max-width: 979px) {
     .wrapper {
       margin-top: 0; } }
@@ -217,8 +217,7 @@ table {
   padding-bottom: 12px; }
   .surcont .prog {
     max-width: 1400px;
-    margin: auto;
-    background: red; }
+    margin: auto; }
   .surcont .row {
     margin-left: 0px; }
 
